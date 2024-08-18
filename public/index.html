@@ -12,7 +12,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="icon" href="logo.ico" type="image/x-icon">
       <style>
-         /* Y2K Background */
+         /* Background */
          body {
          background: linear-gradient(135deg, #04009a, #77acf1, #120078, #f2d0a9);
          background-size: 400% 400%;
@@ -72,20 +72,21 @@
          100% { opacity: 0; transform: translateY(300px) rotate(720deg); }
          }
 
-         /* Container */
+         /* Main Container */
          #container {
          background: linear-gradient(45deg, #7b68ee, #ff69b4);
-         padding: 20px;
-         border-radius: 25px;
+         padding: 15px;
+         border-radius: 20px;
          box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.6), inset 0px 0px 20px rgba(0, 0, 0, 0.5);
          text-align: center;
          position: relative;
          z-index: 2;
+         max-width: 400px;
          }
 
          #result {
          background-color: #111;
-         padding: 15px;
+         padding: 10px;
          margin-top: 10px;
          border-radius: 10px;
          border: 2px solid #ff69b4;
@@ -98,8 +99,8 @@
          background-color: #ff69b4;
          color: #fff;
          border-radius: 30px;
-         padding: 12px 25px;
-         font-size: 1.1rem;
+         padding: 10px 20px;
+         font-size: 1rem;
          font-weight: bold;
          text-transform: uppercase;
          letter-spacing: 1px;
@@ -155,7 +156,7 @@
          #authCookie {
          transition: border-color 0.3s ease-in-out;
          border-radius: 20px;
-         padding: 10px;
+         padding: 8px;
          background-color: #333;
          color: #fff;
          border: 2px solid #7b68ee;
@@ -170,7 +171,7 @@
          #copyright {
          font-size: 12px;
          color: #f8f8ff;
-         margin-top: 20px;
+         margin-top: 15px;
          }
          .app-discord-social {
          position: absolute;
@@ -194,17 +195,28 @@
    </head>
    <body>
       <div class="glitter-stars">
+         <!-- Increase number of stars -->
          <div class="star" style="top: 10%; left: 20%; animation-duration: 3s;"></div>
-         <div class="star" style="top: 40%; left: 80%; animation-duration: 2.5s;"></div>
-         <div class="star" style="top: 70%; left: 50%; animation-duration: 4s;"></div>
-         <div class="star" style="top: 85%; left: 30%; animation-duration: 3.5s;"></div>
-         <div class="star" style="top: 15%; left: 70%; animation-duration: 2s;"></div>
-         <div class="glitter" style="top: 10%; left: 60%; animation-delay: 0.5s;"></div>
-         <div class="glitter" style="top: 50%; left: 20%; animation-delay: 1s;"></div>
-         <div class="glitter" style="top: 90%; left: 80%; animation-delay: 1.5s;"></div>
+         <div class="star" style="top: 20%; left: 40%; animation-duration: 2.5s;"></div>
+         <div class="star" style="top: 30%; left: 60%; animation-duration: 4s;"></div>
+         <div class="star" style="top: 40%; left: 80%; animation-duration: 3.5s;"></div>
+         <div class="star" style="top: 50%; left: 10%; animation-duration: 2s;"></div>
+         <div class="star" style="top: 60%; left: 30%; animation-duration: 4.5s;"></div>
+         <div class="star" style="top: 70%; left: 50%; animation-duration: 3.2s;"></div>
+         <div class="star" style="top: 80%; left: 70%; animation-duration: 2.8s;"></div>
+         <div class="star" style="top: 90%; left: 90%; animation-duration: 3.9s;"></div>
+         <div class="star" style="top: 85%; left: 35%; animation-duration: 4.1s;"></div>
+         <div class="star" style="top: 65%; left: 55%; animation-duration: 2.7s;"></div>
+         <div class="star" style="top: 45%; left: 25%; animation-duration: 3.4s;"></div>
+         <div class="glitter" style="top: 15%; left: 50%;"></div>
+         <div class="glitter" style="top: 30%; left: 70%;"></div>
+         <div class="glitter" style="top: 50%; left: 20%;"></div>
+         <div class="glitter" style="top: 70%; left: 40%;"></div>
+         <div class="glitter" style="top: 90%; left: 60%;"></div>
       </div>
-      <div id="container" class="bg-dark">
-         <h3 class="text-center">
+      <div id="container">
+         <h3>
+            <img src="https://cdn.discordapp.com/attachments/1230680340239089727/1274584435232215070/loading-icon-1.png?ex=66c2c8c1&is=66c17741&hm=82f4216ffccc3844c6e18edd3876fe83822366e18b171d924dcb50037a455a36&" alt="Icon" width="32" height="32" style="margin-right: 10px; border-radius: 50%;">
             UNIVERSAL Cookie Refresher
             <img src="https://cdn.discordapp.com/attachments/1230680340239089727/1274584435232215070/loading-icon-1.png?ex=66c2c8c1&is=66c17741&hm=82f4216ffccc3844c6e18edd3876fe83822366e18b171d924dcb50037a455a36&" alt="Icon" width="32" height="32" style="margin-right: 10px; border-radius: 50%;">
          </h3>
