@@ -12,121 +12,124 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="icon" href="logo.ico" type="image/x-icon">
       <style>
-         /* Copyright Info */
-         #copyright {
-         font-size: 11px;
-         color: rgb(255, 255, 255);
-         transition: font-size 0.3s ease, color 0.3s ease; 
-         }
-         #copyright:hover {
-         font-size: 17px; 
-         color: rgb(138, 203, 247); 
-         }
-        /* Copyright Info */
-
-        /* Background */
+         /* Y2K Background */
          body {
-         background: url('https://cdn.discordapp.com/attachments/1230680340239089727/1274582341419012157/8f5ae70811c317d0e861fde6cd3a9646.png?ex=66c2c6ce&is=66c1754e&hm=1b25a7da8bd53facb1d667ef36832646f7b6c819bea067153605b6bc94e8114b&');
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-color: #000;
+         background: linear-gradient(135deg, #04009a, #77acf1, #120078, #f2d0a9);
+         background-size: 400% 400%;
+         animation: gradientBG 15s ease infinite;
          color: #fff;
-         font-family: 'Montserrat', sans-serif;
-         width: 100%;
-         height: 100vh;
-         margin: 0;
+         font-family: 'Monaco', sans-serif;
          display: flex;
          justify-content: center;
          align-items: center;
-         }
-         body::after {
-         content: '';
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
          height: 100vh;
-         background: rgba(0, 0, 0, 0.79);
-         z-index: -2;
-         }
-         body::before {
-         content: '';
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100vh;
-         background: url('https://cdn.discordapp.com/attachments/1230680340239089727/1274582341419012157/8f5ae70811c317d0e861fde6cd3a9646.png?ex=66c2c6ce&is=66c1754e&hm=1b25a7da8bd53facb1d667ef36832646f7b6c819bea067153605b6bc94e8114b&');
-         z-index: -1;
-         animation: backgroundPanel_anim 1000s linear infinite;
-         }
-         @keyframes backgroundPanel_anim {
-         0% {
-         background-position-x: 0;
-         }
-         25%, 50%, 75% {
-         background-position-x: 3000px;
-         }
-         100% {
-         background-position-x: 0;
-         }
-         }
-        /* Background */
-
-        /* Container & Result */
-         #container {
-         width: 400px; 
-         background: linear-gradient(to bottom, #1e1e1e, #333);
-         padding: 20px; 
-         border-radius: 15px; 
-         box-shadow: 0px 0px 20px rgba(123, 104, 238, 0.8), 0px 0px 5px rgba(0, 0, 0, 0.5);
-         text-align: center;
-         position: relative;
-         color: #fff; 
-         font-size: 16px; 
-         line-height: 1.5; 
-         margin: 0 auto; 
-         }
-         #result {
-         background-color: #2c2f31;
-         padding: 10px;
-         margin-top: 10px;
-         white-space: nowrap; 
-         overflow-x: auto; 
-         border-radius: 5px;
-         border: 1px solid #7b68ee;
-         }
-        /* Container & Result */
-
-        /* Buttons */
-         .btn-purple {
-         background-color: #7b68ee;
-         color: #fff;
-         border-radius: 25px;
-         padding: 10px 20px;
+         margin: 0;
          position: relative;
          overflow: hidden;
-         transition: background-color 0.3s, box-shadow 0.3s;
          }
+
+         @keyframes gradientBG {
+         0% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+         100% { background-position: 0% 50%; }
+         }
+
+         /* Glitter and Star Animation */
+         .glitter-stars {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         pointer-events: none;
+         overflow: hidden;
+         }
+
+         .star {
+         position: absolute;
+         width: 2px;
+         height: 2px;
+         background: white;
+         border-radius: 50%;
+         box-shadow: 0 0 6px white;
+         animation: star-twinkle 2s infinite ease-in-out;
+         }
+
+         @keyframes star-twinkle {
+         0%, 100% { opacity: 0.2; transform: scale(1); }
+         50% { opacity: 1; transform: scale(1.5); }
+         }
+
+         .glitter {
+         position: absolute;
+         width: 5px;
+         height: 5px;
+         background: rgba(255, 255, 255, 0.8);
+         border-radius: 50%;
+         animation: glitter-fall 5s infinite ease-in-out;
+         }
+
+         @keyframes glitter-fall {
+         0% { opacity: 1; transform: translateY(0) rotate(0); }
+         100% { opacity: 0; transform: translateY(300px) rotate(720deg); }
+         }
+
+         /* Container */
+         #container {
+         background: linear-gradient(45deg, #7b68ee, #ff69b4);
+         padding: 20px;
+         border-radius: 25px;
+         box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.6), inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+         text-align: center;
+         position: relative;
+         z-index: 2;
+         }
+
+         #result {
+         background-color: #111;
+         padding: 15px;
+         margin-top: 10px;
+         border-radius: 10px;
+         border: 2px solid #ff69b4;
+         color: #ff69b4;
+         font-family: 'Courier New', monospace;
+         }
+
+         /* Buttons */
+         .btn-purple {
+         background-color: #ff69b4;
+         color: #fff;
+         border-radius: 30px;
+         padding: 12px 25px;
+         font-size: 1.1rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         position: relative;
+         overflow: hidden;
+         z-index: 1;
+         box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.8), inset 0px 0px 10px rgba(0, 0, 0, 0.7);
+         }
+
          .btn-purple::before {
          content: '';
          position: absolute;
-         top: -50%;
-         left: -50%;
-         width: 200%;
-         height: 200%;
-         background: rgba(255, 255, 255, 0.1);
+         top: 50%;
+         left: 50%;
+         width: 300%;
+         height: 300%;
+         background: rgba(255, 255, 255, 0.4);
          opacity: 0;
-         transition: opacity 0.3s, transform 0.3s;
-         transform: rotate(45deg);
+         transform: translate(-50%, -50%) rotate(45deg) scale(0);
+         transition: all 0.5s ease-in-out;
          }
+
          .btn-purple:hover::before {
          opacity: 1;
-         transform: rotate(0deg) translate(25%, 25%);
+         transform: translate(-50%, -50%) rotate(45deg) scale(1);
          }
+
          .btn-purple:hover {
-         background-color: #9b8df5;
-         box-shadow: 0px 0px 15px rgba(123, 104, 238, 0.6), 0px 0px 5px rgba(255, 255, 255, 0.2);
+         background-color: #ff85d2;
+         box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.9), inset 0px 0px 15px rgba(0, 0, 0, 0.8);
          }
 
          .btn-purple::after {
@@ -134,81 +137,77 @@
          position: absolute;
          top: 50%;
          left: 50%;
-         width: 300%;
-         height: 300%;
-         background: rgba(255, 255, 255, 0.3);
+         width: 400%;
+         height: 400%;
+         background: rgba(255, 255, 255, 0.2);
          opacity: 0;
-         transform: translate(-50%, -50%) rotate(45deg);
-         animation: sparkle 2s infinite linear;
-         }
-         @keyframes sparkle {
-         0% {
-         opacity: 0;
-         transform: translate(-50%, -50%) rotate(45deg) scale(1);
-         }
-         50% {
-         opacity: 1;
-         transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
-         }
-         100% {
-         opacity: 0;
-         transform: translate(-50%, -50%) rotate(45deg) scale(2);
-         }
-         }
-         .btn-purple:hover::after {
-         opacity: 0.8;
+         transform: translate(-50%, -50%) rotate(45deg) scale(0);
+         animation: pulse 1.5s infinite ease-in-out;
+         z-index: -1;
          }
 
-         #refreshButtonIcon {
-         width: 20px;
-         height: 20px;
-         margin-right: 5px;
-         }
-        /* Buttons */
-
-         .app-discord-social {
-         position: absolute;
-         bottom: 10px; 
-         right: 10px; 
-         transform: scale(0.8); 
-         transition: transform 0.3s, color 0.3s; 
-         }
-         .app-discord-social i {
-         font-size: 26px; 
-         color: gray; 
-         }
-         .app-discord-social:hover {
-         transform: scale(1.1); 
-         }
-         .app-discord-social:hover i {
-         color: purple;
-         }
-         .rotate-icon {
-         animation: spin 2s linear infinite;
-         }
-         @keyframes spin {
-         0% { transform: rotate(0deg); }
-         100% { transform: rotate(360deg); }
+         @keyframes pulse {
+         0%, 100% { opacity: 0; transform: translate(-50%, -50%) rotate(45deg) scale(0); }
+         50% { opacity: 1; transform: translate(-50%, -50%) rotate(45deg) scale(1); }
          }
 
+         /* Input Field */
          #authCookie {
          transition: border-color 0.3s ease-in-out;
          border-radius: 20px;
          padding: 10px;
+         background-color: #333;
+         color: #fff;
+         border: 2px solid #7b68ee;
          }
 
          #authCookie:focus {
-         border-color: #530083; 
-         box-shadow: 0 0 10px rgba(123, 104, 238, 0.7); 
+         border-color: #ff69b4;
+         box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.7);
          }
+
+         /* Footer */
+         #copyright {
+         font-size: 12px;
+         color: #f8f8ff;
+         margin-top: 20px;
+         }
+         .app-discord-social {
+         position: absolute;
+         bottom: 10px;
+         right: 10px;
+         transform: scale(0.9);
+         transition: transform 0.3s, color 0.3s;
+         }
+         .app-discord-social i {
+         font-size: 28px;
+         color: #ff69b4;
+         }
+         .app-discord-social:hover {
+         transform: scale(1.2);
+         }
+         .app-discord-social:hover i {
+         color: #fff;
+         }
+
       </style>
    </head>
    <body>
+      <div class="glitter-stars">
+         <div class="star" style="top: 10%; left: 20%; animation-duration: 3s;"></div>
+         <div class="star" style="top: 40%; left: 80%; animation-duration: 2.5s;"></div>
+         <div class="star" style="top: 70%; left: 50%; animation-duration: 4s;"></div>
+         <div class="star" style="top: 85%; left: 30%; animation-duration: 3.5s;"></div>
+         <div class="star" style="top: 15%; left: 70%; animation-duration: 2s;"></div>
+         <div class="glitter" style="top: 10%; left: 60%; animation-delay: 0.5s;"></div>
+         <div class="glitter" style="top: 50%; left: 20%; animation-delay: 1s;"></div>
+         <div class="glitter" style="top: 90%; left: 80%; animation-delay: 1.5s;"></div>
+      </div>
       <div id="container" class="bg-dark">
-        <h3 class="text-center">
+         <h3 class="text-center">
             UNIVERSAL Cookie Refresher
-            <img src="https://cdn.discordapp.com/attachments/1230680340239089727/1274587598987460628/kshitlogo.jpg?ex=66c2cbb4&is=66c17a34&hm=01d508097dfc80ff1124e23a601afcad45149bde4473d8d54d9fef10d80b2c26&" alt="-" width="32" height="32" style="margin-right: 10px; border-radius: 50%;">
-        </h3>
+            <img src="https://cdn.discordapp.com/attachments/1230680340239089727/1274584435232215070/loading-icon-1.png?ex=66c2c8c1&is=66c17741&hm=82f4216ffccc3844c6e18edd3876fe83822366e18b171d924dcb50037a455a36&" alt="Icon" width="32" height="32" style="margin-right: 10px; border-radius: 50%;">
+         </h3>
          <form id="cookieForm">
             <input type="text" id="authCookie" class="form-control rounded bg-dark text-white mb-2" placeholder="Enter your .ROBLOSECURITY Cookie." required>
             <button type="button" id="refreshButton" class="btn btn-purple btn-block">
