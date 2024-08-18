@@ -1,169 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Roblox IP Lock Bypass">
-    <meta property="og:description" content="Website that bypasses IP Locks for Cookies!">
-    <meta name="keywords" content="Roblox IP restriction bypass, Unblock restricted IP on Roblox, UNIVERSAL cookie refresher, Bypass Roblox IP lock, Access blocked Roblox IP, Roblox IP unblocker, Overcoming Roblox IP restrictions, Roblox IP block bypass, Bypassing Roblox IP lock, Roblox IP restriction removal, Unlocking blocked Roblox IP, roblox, robux, roblox ip lock, roblox ip lock bypass, rbxfresh" >
-    <title>UNIVERSAL Cookie Refresher</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
-    <style>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+      <meta name="robots" content="index, follow">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:title" content="Roblox IP Lock Bypass">
+      <meta property="og:description" content="Website that bypasses IP Locks for Cookies!">
+      <meta name="keywords" content="Roblox IP restriction bypass, Unblock restricted IP on Roblox, UNIVERSAL cookie refresher, Bypass Roblox IP lock, Access blocked Roblox IP, Roblox IP unblocker, Overcoming Roblox IP restrictions, Roblox IP block bypass, Bypassing Roblox IP lock, Roblox IP restriction removal, Unlocking blocked Roblox IP, roblox, robux, roblox ip lock, roblox ip lock bypass, rbxfresh" >
+      <title>UNIVERSAL Cookie Refresher</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="icon" href="logo.ico" type="image/x-icon">
+      <style>
+         /* Copyright Info */
+         #copyright {
+         font-size: 11px;
+         color: rgb(255, 255, 255);
+         transition: font-size 0.3s ease, color 0.3s ease; 
+         }
+         #copyright:hover {
+         font-size: 17px; 
+         color: rgb(138, 203, 247); 
+         }
+        /* Copyright Info */
+
         /* Background */
-        body {
-            background: url('https://cdn.discordapp.com/attachments/1230680340239089727/1274582341419012157/8f5ae70811c317d0e861fde6cd3a9646.png?ex=66c2c6ce&is=66c1754e&hm=1b25a7da8bd53facb1d667ef36832646f7b6c819bea067153605b6bc94e8114b&');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #000;
-            color: #fff;
-            font-family: 'Montserrat', sans-serif;
-            width: 100%;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        body::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.79);
-            z-index: -2;
-        }
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: url('https://cdn.discordapp.com/attachments/1230680340239089727/1274582341419012157/8f5ae70811c317d0e861fde6cd3a9646.png?ex=66c2c6ce&is=66c1754e&hm=1b25a7da8bd53facb1d667ef36832646f7b6c819bea067153605b6bc94e8114b&');
-            z-index: -1;
-            animation: backgroundPanel_anim 1000s linear infinite;
-        }
-        @keyframes backgroundPanel_anim {
-            0% { background-position-x: 0; }
-            25%, 50%, 75% { background-position-x: 3000px; }
-            100% { background-position-x: 0; }
-        }
+         body {
+         background: url('https://cdn.discordapp.com/attachments/1230680340239089727/1274582341419012157/8f5ae70811c317d0e861fde6cd3a9646.png?ex=66c2c6ce&is=66c1754e&hm=1b25a7da8bd53facb1d667ef36832646f7b6c819bea067153605b6bc94e8114b&');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-color: #000;
+         color: #fff;
+         font-family: 'Montserrat', sans-serif;
+         width: 100%;
+         height: 100vh;
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         body::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background: rgba(0, 0, 0, 0.79);
+         z-index: -2;
+         }
+         body::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background: url('https://cdn.discordapp.com/attachments/1230680340239089727/1274582341419012157/8f5ae70811c317d0e861fde6cd3a9646.png?ex=66c2c6ce&is=66c1754e&hm=1b25a7da8bd53facb1d667ef36832646f7b6c819bea067153605b6bc94e8114b&');
+         z-index: -1;
+         animation: backgroundPanel_anim 1000s linear infinite;
+         }
+         @keyframes backgroundPanel_anim {
+         0% {
+         background-position-x: 0;
+         }
+         25%, 50%, 75% {
+         background-position-x: 3000px;
+         }
+         100% {
+         background-position-x: 0;
+         }
+         }
+        /* Background */
 
         /* Container & Result */
-        #container {
-            width: 400px;
-            background: linear-gradient(to bottom, #2d2d2d, #3a3a3a);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-            text-align: center;
-            position: relative;
-            color: #fff;
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0 auto;
-        }
-        #result {
-            background-color: #1e1e1e;
-            padding: 10px;
-            margin-top: 10px;
-            white-space: nowrap;
-            overflow-x: auto;
-            border-radius: 8px;
-        }
+         #container {
+         width: 400px; 
+         background: linear-gradient(to bottom, #1e1e1e, #333);
+         padding: 20px; 
+         border-radius: 15px; 
+         box-shadow: 0px 0px 20px rgba(123, 104, 238, 0.8), 0px 0px 5px rgba(0, 0, 0, 0.5);
+         text-align: center;
+         position: relative;
+         color: #fff; 
+         font-size: 16px; 
+         line-height: 1.5; 
+         margin: 0 auto; 
+         }
+         #result {
+         background-color: #2c2f31;
+         padding: 10px;
+         margin-top: 10px;
+         white-space: nowrap; 
+         overflow-x: auto; 
+         border-radius: 5px;
+         border: 1px solid #7b68ee;
+         }
+        /* Container & Result */
 
         /* Buttons */
-        .btn-purple {
-            background: linear-gradient(45deg, #6a0dad, #7b68ee);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        .btn-purple:hover {
-            background: linear-gradient(45deg, #7b68ee, #9a00e6);
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-        }
-        #refreshButtonIcon {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
+         .btn-purple {
+         background-color: #7b68ee;
+         color: #fff;
+         border-radius: 25px;
+         padding: 10px 20px;
+         position: relative;
+         overflow: hidden;
+         transition: background-color 0.3s, box-shadow 0.3s;
+         }
+         .btn-purple::before {
+         content: '';
+         position: absolute;
+         top: -50%;
+         left: -50%;
+         width: 200%;
+         height: 200%;
+         background: rgba(255, 255, 255, 0.1);
+         opacity: 0;
+         transition: opacity 0.3s, transform 0.3s;
+         transform: rotate(45deg);
+         }
+         .btn-purple:hover::before {
+         opacity: 1;
+         transform: rotate(0deg) translate(25%, 25%);
+         }
+         .btn-purple:hover {
+         background-color: #9b8df5;
+         box-shadow: 0px 0px 15px rgba(123, 104, 238, 0.6), 0px 0px 5px rgba(255, 255, 255, 0.2);
+         }
 
-        /* Discord Icon */
-        .app-discord-social {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            transform: scale(0.8);
-            transition: transform 0.3s, color 0.3s;
-        }
-        .app-discord-social i {
-            font-size: 26px;
-            color: gray;
-        }
-        .app-discord-social:hover {
-            transform: scale(1.1);
-        }
-        .app-discord-social:hover i {
-            color: purple;
-        }
+         .btn-purple::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 300%;
+         height: 300%;
+         background: rgba(255, 255, 255, 0.3);
+         opacity: 0;
+         transform: translate(-50%, -50%) rotate(45deg);
+         animation: sparkle 2s infinite linear;
+         }
+         @keyframes sparkle {
+         0% {
+         opacity: 0;
+         transform: translate(-50%, -50%) rotate(45deg) scale(1);
+         }
+         50% {
+         opacity: 1;
+         transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+         }
+         100% {
+         opacity: 0;
+         transform: translate(-50%, -50%) rotate(45deg) scale(2);
+         }
+         }
+         .btn-purple:hover::after {
+         opacity: 0.8;
+         }
 
-        /* Animation */
-        .rotate-icon {
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+         #refreshButtonIcon {
+         width: 20px;
+         height: 20px;
+         margin-right: 5px;
+         }
+        /* Buttons */
 
-        #authCookie {
-            transition: border-color 0.3s ease-in-out;
-        }
-        #authCookie:focus {
-            border-color: #530083;
-            box-shadow: 0 0 5px rgba(123, 104, 238, 0.5);
-        }
+         .app-discord-social {
+         position: absolute;
+         bottom: 10px; 
+         right: 10px; 
+         transform: scale(0.8); 
+         transition: transform 0.3s, color 0.3s; 
+         }
+         .app-discord-social i {
+         font-size: 26px; 
+         color: gray; 
+         }
+         .app-discord-social:hover {
+         transform: scale(1.1); 
+         }
+         .app-discord-social:hover i {
+         color: purple;
+         }
+         .rotate-icon {
+         animation: spin 2s linear infinite;
+         }
+         @keyframes spin {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+         }
 
-        /* Copyright Info */
-        #copyright {
-            font-size: 11px;
-            color: rgb(255, 255, 255);
-            transition: font-size 0.3s ease, color 0.3s ease;
-        }
-        #copyright:hover {
-            font-size: 17px;
-            color: rgb(138, 203, 247);
-        }
-    </style>
-</head>
-<body>
-    <div id="container" class="bg-dark">
+         #authCookie {
+         transition: border-color 0.3s ease-in-out;
+         border-radius: 20px;
+         padding: 10px;
+         }
+
+         #authCookie:focus {
+         border-color: #530083; 
+         box-shadow: 0 0 10px rgba(123, 104, 238, 0.7); 
+         }
+      </style>
+   </head>
+   <body>
+      <div id="container" class="bg-dark">
         <h3 class="text-center">
             UNIVERSAL Cookie Refresher
             <img src="https://cdn.discordapp.com/attachments/1230680340239089727/1274587598987460628/kshitlogo.jpg?ex=66c2cbb4&is=66c17a34&hm=01d508097dfc80ff1124e23a601afcad45149bde4473d8d54d9fef10d80b2c26&" alt="-" width="32" height="32" style="margin-right: 10px; border-radius: 50%;">
         </h3>
-        <form id="cookieForm">
+         <form id="cookieForm">
             <input type="text" id="authCookie" class="form-control rounded bg-dark text-white mb-2" placeholder="Enter your .ROBLOSECURITY Cookie." required>
             <button type="button" id="refreshButton" class="btn btn-purple btn-block">
-                <img id="refreshButtonIcon" src="https://cdn.discordapp.com/attachments/1230680340239089727/1274584435232215070/loading-icon-1.png?ex=66c2c8c1&is=66c17741&hm=82f4216ffccc3844c6e18edd3876fe83822366e18b171d924dcb50037a455a36&" alt="Refresh Icon">
-                Refresh Cookie
+            <img id="refreshButtonIcon" src="https://cdn.discordapp.com/attachments/1230680340239089727/1274584435232215070/loading-icon-1.png?ex=66c2c8c1&is=66c17741&hm=82f4216ffccc3844c6e18edd3876fe83822366e18b171d924dcb50037a455a36&" alt="Refresh Icon">
+            Refresh Cookie
             </button>
-        </form>
-        <div id="result"></div>
-        <button id="copyButton" class="btn btn-purple btn-block mt-3">Copy</button>
-        <p id="countdown" class="mt-3 text-muted text-center"></p>
-        <span id="copyright" class="text-zinc-500 inline" style="font-size: 15px;">© cton and mirk</span>
-        <a href="https://discord.gg/CCrmJ5T77y" target="_blank" class="app-discord-social">
-            <i class="fab fa-discord"></i>
-        </a>
-    </div>
+         </form>
+         <div id="result"></div>
+         <button id="copyButton" class="btn btn-purple btn-block mt-3">Copy</button>
+         <p id="countdown" class="mt-3 text-muted text-center"></p>
+         <span id="copyright" class="text-zinc-500 inline" style="font-size: 15px;">© cton and mirk</span>
+         <a href="https://discord.gg/CCrmJ5T77y" target="_blank" class="app-discord-social">
+         <i class="fab fa-discord"></i>
+         </a>
+      </div>
+      <script src="https://kit.fontawesome.com/b617dc6679.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="script.js"></script>
+   </body>
+</html>
